@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title> score keeper </title>
+     <script>
+         function incA(){
+             var Score=parseInt(document.getElementById("btnScoreA").innerHTML);
+           Score++;
+           document.getElementById("btnScoreA").innerHTML=Score;
+        }
+
+         function incB(){
+            var Score=parseInt(document.getElementById("btnScoreB").innerHTML);
+           Score++;
+           document.getElementById("btnScoreB").innerHTML=Score
+            
+            }
+
+        function decA(){
+            var Score=parseInt(document.getElementById("btnScoreA").innerHTML);
+           Score--;
+           document.getElementById("btnScoreA").innerHTML=Score;
+         }
+         
+         function decB(){
+            var Score=parseInt(document.getElementById("btnScoreB").innerHTML);
+           Score--;
+           document.getElementById("btnScoreB").innerHTML=Score;
+             
+            }
+     </script>
+     <style>
+         body{
+             background-image: url('sport.jpg');
+             background-size: 100% 100%;
+             height: 100vh;
+         }
+         .app-title{
+             background-color: black;
+             color: white;
+             border-radius: 25px;
+             padding: 20px;
+             text-align: center;
+             margin-left: 50px;
+             margin-right: 50px;
+             font-size: 30px;
+         }
+         
+
+         .container{
+            
+             display: flex;
+             flex-direction: row;
+             justify-content: space-evenly;
+              margin:20px;
+              padding-top: 30px;
+              padding-bottom: 30px;
+              
+         }
+         .container-child{
+             border: 1px rgb(255, 255, 255) solid;
+             width: 300px;
+             height: 300px;
+             padding:10px;
+             margin: 10px;
+             border-radius: 25px;
+             box-shadow: 0px 0px 10px black;
+             background-color: #FFE53B;
+                background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+
+         }
+         .team-title{
+             text-align: center;
+             font-size: 30px;
+             font-weight: bold;
+         }
+         .btnScore{
+             width: 50px;
+             height: 50px;
+             font-size: 40px;
+             border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            }
+
+            .txtScore{
+                text-align: center;
+                font-size: 30px;
+            }
+            
+        
+
+     </style>
+    </head>
+    <body>
+
+        <h1 class="app-title"> Score Board </h1>
+        <div class="container">
+
+            <div class="container-child">
+                <h2 class="team-title"> Team A</h2>
+
+                <button id="btnIncA" class="btnScore" onClick="incA();"> + </button>
+
+                <h3 id="btnScoreA" class="txtScore"> 0 </h3>
+
+                <button id="btnDecA" class="btnScore" onClick="decA();" > - </button>
+            </div>
+
+            <div class="container-child">
+                <h2 class="team-title"> Team B</h2>
+
+                <button id="btnIncB" class="btnScore" onClick="incB();"> + </button>
+
+                <h3 id="btnScoreB" class="txtScore"> 0 </h3>
+
+                <button id="btnDecB" class="btnScore" onClick="decB();"> - </button>
+               
+            </div>
+
+        </div>
+
+    </body>
+</html>
